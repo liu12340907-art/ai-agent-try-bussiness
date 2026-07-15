@@ -89,22 +89,6 @@ public class BookAction {
         }
         return "json";
     }
-
-    /**
-     * Delete user
-     */
-    public String delete() {
-        try {
-            userService.deleteById(id);
-            dataMap.put("success", true);
-            dataMap.put("message", "用户删除成功");
-        } catch (Exception e) {
-            dataMap.put("success", false);
-            dataMap.put("message", "用户删除失败: " + e.getMessage());
-        }
-        return "json";
-    }
-
     /**
      * User login
      */
